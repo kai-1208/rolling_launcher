@@ -55,8 +55,8 @@ void button_read() {
                 target_rpm[0] = 10.0f;
                 target_rpm[1] = 0.0f;
             } else {
-                pwm_manual[0] = 9000;
-                pwm_manual[1] = 5500;
+                pwm_manual[0] = 11000;
+                pwm_manual[1] = 6000;
             }
         } else {
             if (pid_enabled) {
@@ -158,8 +158,8 @@ int main() {
     can_thread.start(can_send);
     // Thread can_receive_thread;
     // can_receive_thread.start(can_receive);
-    // Thread rpm_control_thread;
-    // rpm_control_thread.start(rpm_control);
+    Thread rpm_control_thread;
+    rpm_control_thread.start(rpm_control);
     while (true) {
         // ThisThread::sleep_for(1s);
     }
