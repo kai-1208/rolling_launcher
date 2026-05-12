@@ -55,7 +55,7 @@ void button_read() {
                 target_rpm[0] = 10.0f;
                 target_rpm[1] = 0.0f;
             } else {
-                pwm_manual[0] = 11000;
+                pwm_manual[0] = 10000;
                 pwm_manual[1] = 6000;
             }
         } else {
